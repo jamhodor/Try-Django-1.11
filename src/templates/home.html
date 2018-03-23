@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block head_title %}Welcome || {{ block.super }}{% endblock head_title %}
+
 {% block content %}
 <p> home</p>
 <p> {{randint}} </p>

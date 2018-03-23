@@ -4,20 +4,21 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Welcome to Try Django 1.11</title>
+  <title>{% block head_title %}Muypicky.com{% endblock head_title %}</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="jamhodor">
+  {% include 'snippets/css.html' %}
 </head>
 
-<h1>MuyPicky.com</h1>
-
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/contact/">Contact</a>
-
 <body>
-<p>comming from base</p>
 
+{% include 'snippets/nav.html' %}
+
+
+
+<div class="container">
   {% block content %} {% endblock content %}
+</div>
+{%  include 'snippets/js.html' %}
 </body>
 </html>

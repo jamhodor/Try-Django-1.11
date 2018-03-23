@@ -1,8 +1,10 @@
 
 {% extends "base.html" %}
 
-{% block content %}
-<h1>about</h1>
-<p> this is about me </p>
+{% block head_title %}About || {{ block.super }}{% endblock head_title %}
 
+{% block content %}
+<h1>About</h1>
+<p> this is about me </p>
+{% include 'snippets/sidebar.html' %}
 {% endblock content %}
